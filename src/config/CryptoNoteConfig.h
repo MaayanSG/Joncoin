@@ -17,11 +17,11 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 10; // seconds
-const uint64_t DIFFICULTY_TARGET_V2                          = 20; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
+const uint64_t DIFFICULTY_TARGET_V2                          = 60; // seconds
 
 /* Height to swap to DIFFICULTY_TARGET_V2 */
-const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 700000;
+const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 1000000;
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
@@ -33,7 +33,7 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 6 * DIFFICULTY_TA
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(10000000000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000000);
 
 const uint32_t EMISSION_SPEED_FACTOR                         = 23;
 const uint32_t EMISSION_SPEED_FACTOR_V2                      = 24;
@@ -42,7 +42,7 @@ static_assert(EMISSION_SPEED_FACTOR    <= 8 * sizeof(uint64_t), "Bad EMISSION_SP
 static_assert(EMISSION_SPEED_FACTOR_V2 <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Height to swap to EMISSION_SPEED_FACTOR_V2 */
-const uint64_t EMISSION_SPEED_FACTOR_V2_HEIGHT               = 700000;
+const uint64_t EMISSION_SPEED_FACTOR_V2_HEIGHT               = 1000000;
 
 /* Premine amount */
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
@@ -137,7 +137,7 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
 {
-    700000,
+    1000000,
 };
 
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
@@ -164,7 +164,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "DeroGold";
+const char     CRYPTONOTE_NAME[]                             = "AquaGold";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -183,8 +183,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  42069;
-const int      RPC_DEFAULT_PORT                              =  6969;
+const int      P2P_DEFAULT_PORT                              =  42081;
+const int      RPC_DEFAULT_PORT                              =  42082;
 const int      SERVICE_DEFAULT_PORT                          =  1337;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -223,14 +223,10 @@ const char     LATEST_VERSION_URL[]                          = "https://github.c
 const std::string LICENSE_URL                                = "https://github.com/derogold/derogold/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0x20, 0x69, 0x6e, 0x73, 0x74, 0x61, 0x6c, 0x6c, 0x20, 0x67, 0x65, 0x6e, 0x74, 0x6f, 0x6f, 0x20  }
+    {  0x15, 0x5e, 0x69, 0x42, 0x91, 0x48, 0x2c, 0x4c, 0x10, 0x87, 0x27, 0x3f, 0x82, 0x6a, 0x8f, 0x50  }
 };
 
 const char* const SEED_NODES[] = {
-    "97.64.253.98:42069", // morpheus
-    "207.180.227.16:42069", // explorer.dego.gq
-    "5.172.219.174:42069", //sniperviperman // Edited as requested by sniperviperman.
-    "149.129.97.195:42069", // netmebtc
-    "91.239.237.54:42069", // Leo Cuvée
+    "94.214.85.66:42081", // Gabcraftia
 };
 } // CryptoNote
