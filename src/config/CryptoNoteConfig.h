@@ -228,5 +228,8 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 
 const char* const SEED_NODES[] = {
     "94.214.85.66:42081", // Gabcraftia
+    "40.127.201.242:42081", // Gabcraftia
+     "40.127.102.36:42081", // Gabcraftia
+     "34.77.48.29:42081", // miningpool.fun
 };
 } // CryptoNote
