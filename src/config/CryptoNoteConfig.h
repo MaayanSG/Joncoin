@@ -3,6 +3,7 @@
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2018-2019, The DeroGold Association
 // Copyright (c) 2019-2019, The AquaGold Developers
+// Copyright (c) 2019-2019, The Joncoin Developers
 // Please see the included LICENSE file for more information.
 
 #pragma once
@@ -17,8 +18,8 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
-const uint64_t DIFFICULTY_TARGET_V2                          = 60; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 30; // seconds
+const uint64_t DIFFICULTY_TARGET_V2                          = 30; // seconds
 
 /* Height to swap to DIFFICULTY_TARGET_V2 */
 const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 1000000;
@@ -26,14 +27,14 @@ const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 1000000;
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x28c9;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 120;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x16767f;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 6 * DIFFICULTY_TARGET;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(1000000000000);
 
 const uint32_t EMISSION_SPEED_FACTOR                         = 23;
 const uint32_t EMISSION_SPEED_FACTOR_V2                      = 24;
@@ -164,7 +165,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "AquaGold";
+const char     CRYPTONOTE_NAME[]                             = "Joncoin";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -183,8 +184,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  42081;
-const int      RPC_DEFAULT_PORT                              =  42082;
+const int      P2P_DEFAULT_PORT                              =  1381;
+const int      RPC_DEFAULT_PORT                              =  1382;
 const int      SERVICE_DEFAULT_PORT                          =  1337;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -223,13 +224,10 @@ const char     LATEST_VERSION_URL[]                          = "https://github.c
 const std::string LICENSE_URL                                = "https://github.com/derogold/derogold/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0x15, 0x5e, 0x69, 0x42, 0x91, 0x48, 0x2c, 0x4c, 0x10, 0x87, 0x27, 0x3f, 0x82, 0x6a, 0x8f, 0x50  }
+    {  0x5e, 0x15, 0x50, 0x62, 0x61, 0x38, 0x2d, 0x6c, 0x10, 0x97, 0x47, 0x4f, 0x83, 0x7a, 0x9f, 0x69  }
 };
 
 const char* const SEED_NODES[] = {
-    "94.214.85.66:42081", // Gabcraftia
-    "40.127.201.242:42081", // Gabcraftia
-     "40.127.102.36:42081", // Gabcraftia
-     "34.77.48.29:42081", // miningpool.fun
+    "87.251.193.182:1381", // Jonny
 };
 } // CryptoNote
