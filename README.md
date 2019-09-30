@@ -1,4 +1,4 @@
-![image](https://cdn.discordapp.com/attachments/617001697054556177/617017473996292117/Screenshot_2019-08-30_at_10.24.00_AM.png)
+![image](https://jonhosting.com/JonHost.png)
 
 ### Installing
 
